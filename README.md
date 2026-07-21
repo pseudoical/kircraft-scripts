@@ -8,11 +8,17 @@ Example for the [How to use scripts](#how-to-use-scripts) section.
 
 ![Hello World](assets/hello-world.png)
 
+# [Hide Crosshair](scripts/hide-crosshair.js) v0.2.22
+
+Hide crosshair.
+
+![Hide Crosshair](assets/hide-crosshair.png)
+
 # [Instant Lock](scripts/instant-lock.js) v0.2.22
 
-Automatically confirm lock when clicking an item's lock icon.
+Automatically confirm lock when locking an item.
 
-![Instant Lock](assets/instant-lock.*)
+![Instant Lock](assets/instant-lock.webp)
 
 # [Instant Resume](scripts/instant-resume.js) v0.2.22
 
@@ -22,19 +28,19 @@ Instantly load into the game.
 
 # [Knife Wireframe](scripts/knife-wireframe.js) v0.2.22
 
-Display knife models as wireframes.
+Display knife model as a wireframe. Use at your own risk.
 
 ![Knife Wireframe](assets/knife-wireframe.png)
 
 # [Show Inventory](scripts/show-inventory.js) v0.2.22
 
-Always show inventory when going to a new location.
+Automatically show inventory when going to a new location.
 
 ![Show Inventory](assets/show-inventory.webp)
 
 # [Show Scavenge](scripts/show-scavenge.js) v0.2.22
 
-Always show the scavenge wheel when walking over items.
+Automatically show scavenge wheel when walking over items.
 
 ![Show Scavenge](assets/show-scavenge.webp)
 
@@ -46,7 +52,7 @@ Outline skill slot green when ready.
 
 # [Wanted Items](scripts/wanted-items.js) v0.2.22
 
-List wanted items and highlight them on the scavenge wheel. Supports regex.
+List wanted items and highlight them on scavenge wheel. Supports regex.
 
 ![Wanted Items](assets/wanted-items.webp)
 # How to use scripts

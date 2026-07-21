@@ -11,7 +11,7 @@
 
 // @ts-check
 
-(async function () {
+(function () {
     const style = document.createElement("style");
 
     style.textContent = `
