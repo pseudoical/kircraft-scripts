@@ -46,8 +46,8 @@ List wanted items and highlight them on the scavenge wheel. Supports regex.
 # How to use scripts
 
 1. Install a userscript extension like **Tampermonkey**:  
-    [<img src="assets/instructions/md-chrome.svg" width="24" style="vertical-align: middle"> Tampermonkey for Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)  
-    [<img src="assets/instructions/md-firefox.svg" width="24" style="vertical-align: middle"> Tampermonkey for Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
+    [<img src="assets/instructions/md-chrome.svg" alt="Chrome logo" width="24" style="vertical-align: middle"> Tampermonkey for Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)  
+    [<img src="assets/instructions/md-firefox.svg" alt="Firefox logo" width="24" style="vertical-align: middle"> Tampermonkey for Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
     <br>
 
 2. **Choose** the **script** you want to use from above and click the blue text:
