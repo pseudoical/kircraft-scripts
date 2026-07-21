@@ -60,11 +60,7 @@ cat >> "$OUTPUT" <<EOF
     <br>
 
 4. Navigate to the Tampermonkey **dashboard**:
-    <div style="line-height: 0;">
-    <img src="assets/instructions/tm-top-menu-1.png">
-    <img src="assets/instructions/tm-top-menu-2.png">
-    <img src="assets/instructions/tm-top-menu-3.png">
-    </div>
+    ![Tampermonkey dashboard](assets/instructions/tm-dashboard.png)
     <br>
 
 5. Click the **plus icon** on the top menu to create a new script:
