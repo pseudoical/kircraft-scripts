@@ -60,8 +60,7 @@ cat >> "$OUTPUT" <<EOF
     <br>
 
 4. Navigate to the Tampermonkey **dashboard**:
-    ![Tampermonkey dashboard](assets/instructions/tm-dashboard.png)
-    <br>
+    <img src="assets/instructions/tm-dashboard.png" alt="Tampermonkey dashboard" style="width: 100%;">
 
 5. Click the **plus icon** on the top menu to create a new script:
     ![Plus icon](assets/instructions/tm-plus-icon.png)
