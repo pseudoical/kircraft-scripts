@@ -20,25 +20,26 @@ See [How to use scripts](#how-to-use-scripts) for instructions.
 
 EOF
 
-for script in ./scripts/*.js; do
-    content=$(<"$script")
+{
+    for script in ./scripts/*.js; do
+        content=$(<"$script")
 
-    for field in name version description; do
-        # Capture `Hello World` from `@name Hello World\n`
-        [[ $content =~ @$field[[:space:]]+([^$'\n']+) ]] \
-            && declare "$field=${BASH_REMATCH[1]}"
+        for field in name version description; do
+            # Capture `Hello World` from `@name Hello World\n`
+            [[ $content =~ @$field[[:space:]]+([^$'\n']+) ]] \
+                && declare "$field=${BASH_REMATCH[1]}"
+        done
+
+        script="${script#./}"
+        asset="assets/$(basename "$script")"
+        asset=("${asset%.js}".*)
+        asset="${asset[0]}"
+
+        printf \
+            "# [%s](%s) v%s\n\n%s\n\n![%s](%s)\n\n" \
+            "$name" "$script" "$version" "$description" "$name" "$asset"
     done
-
-    script="${script#./}"
-    asset="assets/$(basename "$script")"
-    asset=("${asset%.js}".*)
-    asset="${asset[0]}"
-
-    printf \
-        "# [%s](%s) v%s\n\n%s\n\n![%s](%s)\n\n" \
-        "$name" "$script" "$version" "$description" "$name" "$asset" \
-        >> "$OUTPUT"
-done
+} >> "$OUTPUT"
 
 # Remove second newline at end of file: \n\n -> \n
 truncate -s -1 "$OUTPUT"
