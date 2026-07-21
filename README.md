@@ -14,6 +14,12 @@ Hide crosshair.
 
 ![Hide Crosshair](assets/hide-crosshair.png)
 
+# [Hide Miss](scripts/hide-miss.js) v0.2.22
+
+Hide "MISS" text when missing attacks.
+
+![Hide Miss](assets/hide-miss.webp)
+
 # [Instant Lock](scripts/instant-lock.js) v0.2.22
 
 Automatically confirm lock when locking an item.
