@@ -45,14 +45,13 @@ List wanted items and highlight them on the scavenge wheel. Supports regex.
 ![Wanted Items](assets/wanted-items.webp)
 # How to use scripts
 
-1. Install a userscript extension like **Tampermonkey**:
-    [<img src="assets/instructions/md-chrome.svg" width="24" style="vertical-align: middle"> Tampermonkey for Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+1. Install a userscript extension like **Tampermonkey**:  
+    [<img src="assets/instructions/md-chrome.svg" width="24" style="vertical-align: middle"> Tampermonkey for Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)  
     [<img src="assets/instructions/md-firefox.svg" width="24" style="vertical-align: middle"> Tampermonkey for Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
     <br>
 
 2. **Choose** the **script** you want to use from above and click the blue text:
-    ![Hello world header](assets/instructions/gh-hello-world.png)
-    <br>
+    # [Hello World](scripts/hello-world.js) v1.2.3
 
 3. **Copy** the **script** by clicking the square icon (highlighted in blue) from the top menu:
     ![Top menu](assets/instructions/gh-top-menu.png)
