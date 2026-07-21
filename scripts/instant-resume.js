@@ -90,7 +90,7 @@
 
     const loadingEnter = await debug(`getElementById("loading-enter")`, async () => {
         const element = await getElement(() => document.getElementById("loading-enter"));
-        await visibility(element);
+        await debug(`visibility("loading-enter")`, () => visibility(element));
         return element;
     });
 

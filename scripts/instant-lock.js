@@ -65,7 +65,9 @@
     }
 
     async function clickLockOk() {
-        const lockOk = await getElement(() => document.querySelector(".ptk-lock-btn.ptk-lock-ok"));
+        const lockOk = await debug(`querySelector(".ptk-lock-btn.ptk-lock-ok")`, () => {
+            return getElement(() => document.querySelector(".ptk-lock-btn.ptk-lock-ok"));
+        });
 
         if (!(lockOk instanceof HTMLElement)) {
             console.error("!(lockOk instanceof HTMLElement)");
@@ -75,6 +77,7 @@
         // The script currently works without this delay. A race condition
         // cannot be ruled out. Keep this as a potential fallback if future
         // updates introduce timing issues that cause the script to break.
+        //
         // await new Promise((resolve) => requestAnimationFrame(resolve));
 
         lockOk.click();
