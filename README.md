@@ -79,6 +79,7 @@ List wanted items and highlight them on the scavenge wheel. Supports regex.
     <br>
 
 8. Go to **[kircraft.io](https://kircraft.io/)** and reload the page if necessary.
-    <br>
 
-This project is licensed under the WTFPL, Version 2. See [LICENSE](LICENSE) for details.
+---
+
+<p align="center">This project is licensed under the WTFPL, Version 2. See <a href="LICENSE">LICENSE</a> for details.</p>
