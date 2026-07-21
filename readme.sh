@@ -54,11 +54,7 @@ cat >> "$OUTPUT" <<EOF
     <br>
 
 2. **Choose** the **script** you want to use from above and click the blue text:
-    <div id="user-content-toc">
-        <ul>
-            <summary><h1><a href="scripts/hello-world.js">Hello World</a> v1.2.3</h1></summary>
-        </ul>
-    </div>
+    # [Hello World](scripts/hello-world.js) v1.2.3
 
 3. **Copy** the **script** by clicking the square icon (highlighted in blue) from the top menu:
     ![Top menu](assets/instructions/gh-top-menu.png)
