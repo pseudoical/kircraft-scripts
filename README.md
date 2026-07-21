@@ -51,14 +51,19 @@ List wanted items and highlight them on the scavenge wheel. Supports regex.
     <br>
 
 2. **Choose** the **script** you want to use from above and click the blue text:
-    # [Hello World](scripts/hello-world.js) v1.2.3
+    <div id="user-content-toc">
+        <ul>
+            <summary><h1><a href="scripts/hello-world.js">Hello World</a> v1.2.3</h1></summary>
+        </ul>
+    </div>
 
 3. **Copy** the **script** by clicking the square icon (highlighted in blue) from the top menu:
     ![Top menu](assets/instructions/gh-top-menu.png)
     <br>
 
 4. Navigate to the Tampermonkey **dashboard**:
-    <img src="assets/instructions/tm-dashboard.png" alt="Tampermonkey dashboard" style="width: 100%;">
+    ![Tampermonkey dashboard](assets/instructions/tm-dashboard.png)
+    <br>
 
 5. Click the **plus icon** on the top menu to create a new script:
     ![Plus icon](assets/instructions/tm-plus-icon.png)
