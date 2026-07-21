@@ -8,6 +8,12 @@ Example for the [How to use scripts](#how-to-use-scripts) section.
 
 ![Hello World](assets/hello-world.png)
 
+# [Instant Lock](scripts/instant-lock.js) v0.2.22
+
+Automatically confirm lock when clicking an item's lock icon.
+
+![Instant Lock](assets/instant-lock.*)
+
 # [Instant Resume](scripts/instant-resume.js) v0.2.22
 
 Instantly load into the game.
@@ -65,7 +71,7 @@ List wanted items and highlight them on the scavenge wheel. Supports regex.
     ![Plus icon](assets/instructions/tm-plus-icon.png)
     <br>
 
-6. Delete the default code and **paste** the **script** on the code editor:
+6. Delete the default code and **paste** the **script** into the code editor:
     ![Hello world script](assets/instructions/tm-hello-world.png)
     <br>
 
