@@ -1,4 +1,4 @@
-# Kircraft Scripts
+# KirCraft Scripts
 
 See [How to use scripts](#how-to-use-scripts) for instructions.
 
