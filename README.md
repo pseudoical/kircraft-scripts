@@ -2,6 +2,12 @@
 
 See [How to use scripts](#how-to-use-scripts) for instructions.
 
+# [Drop All](scripts/drop-all.js) v0.2.22
+
+Automatically drop unwanted items for easier inventory management.
+
+![Drop All](assets/drop-all.webp)
+
 # [Hello World](scripts/hello-world.js) v1.2.3
 
 Example for the [How to use scripts](#how-to-use-scripts) section.
