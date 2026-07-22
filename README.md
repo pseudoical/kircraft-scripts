@@ -26,6 +26,12 @@ Hide "MISS" text when missing attacks.
 
 ![Hide Miss](assets/hide-miss.webp)
 
+# [Instant Drop](scripts/instant-drop.js) v0.2.22
+
+Automatically confirm drop when droping an item.
+
+![Instant Drop](assets/instant-drop.webp)
+
 # [Instant Lock](scripts/instant-lock.js) v0.2.22
 
 Automatically confirm lock when locking an item.
