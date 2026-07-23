@@ -276,10 +276,7 @@
             const section = document.createElement("div");
             section.className = "settings-section-lbl";
             section.textContent = label;
-
             this.body.appendChild(section);
-
-            return section;
         }
 
         /**
