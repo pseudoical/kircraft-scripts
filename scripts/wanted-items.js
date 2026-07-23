@@ -288,7 +288,7 @@
             node.style.filter = text !== null && isItemWanted(text.toLowerCase()) ? "invert(1)" : "";
 
             // Mutations always occur when standing over items; throttle for performance.
-            await new Promise((resolve) => requestAnimationFrame(resolve));
+            await new Promise((resolve) => window.requestAnimationFrame(resolve));
         }
     });
 

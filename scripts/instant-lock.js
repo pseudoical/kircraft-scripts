@@ -78,7 +78,7 @@
         // cannot be ruled out. Keep this as a potential fallback if future
         // updates introduce timing issues that cause the script to break.
         //
-        // await new Promise((resolve) => requestAnimationFrame(resolve));
+        // await new Promise((resolve) => window.requestAnimationFrame(resolve));
 
         lockOk.click();
     }

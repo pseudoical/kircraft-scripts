@@ -75,7 +75,7 @@
 
     dropBtn.onclick = async (_ev) => {
         // Wait for drop confirmation pop-up.
-        await new Promise((resolve) => requestAnimationFrame(resolve));
+        await new Promise((resolve) => window.requestAnimationFrame(resolve));
 
         const okBtn = await debug(`getElementById("inv-confirm-ok"))`, () => {
             return getElement(() => document.getElementById("inv-confirm-ok"));

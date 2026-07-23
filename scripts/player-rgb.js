@@ -190,7 +190,7 @@
 
             player.wireframe = settings.isWireframe;
 
-            await new Promise((resolve) => requestAnimationFrame(resolve));
+            await new Promise((resolve) => window.requestAnimationFrame(resolve));
         }
     })();
 
@@ -416,8 +416,6 @@
         if (removedNodes.length === 0 || (removedNodes.length === 1 && removedNodes[0] instanceof Text)) {
             return;
         }
-
-        await new Promise((resolve) => window.requestAnimationFrame(resolve));
 
         const tab = await debug(`querySelector(".settings-tab.active")`, () => {
             return getElement(() => settingsPanel.querySelector(".settings-tab.active"));
