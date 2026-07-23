@@ -46,7 +46,7 @@ Instantly load into the game.
 
 # [Knife Wireframe](scripts/knife-wireframe.js) v0.2.22
 
-Display knife model as a wireframe. Use at your own risk.
+Display knife model as a wireframe.
 
 ![Knife Wireframe](assets/knife-wireframe.png)
 
