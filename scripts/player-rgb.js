@@ -93,41 +93,46 @@
      * }} Player
      */
 
+    /**
+     * @typedef {Readonly<Pick<Player, "color" | "emissive">>} Default
+     */
+
     const window_WeakMap = window.WeakMap;
 
-    /** @type {Promise<Player>} */
-    const waitPlayer = new Promise((resolve) => {
-        // @ts-expect-error ts(2510)
-        window.WeakMap = /** @type {WeakMapConstructor} */ (class extends window_WeakMap {
-            /**
-             * @param  {ConstructorParameters<typeof WeakMap>} args
-             */
-            constructor(...args) {
-                super(...args);
+    /** @type {Player[]} */
+    let players = [];
+
+    /** @type {Default[]} */
+    let defaults = [];
+
+    // @ts-expect-error ts(2510)
+    window.WeakMap = /** @type {WeakMapConstructor} */ (class extends window_WeakMap {
+        /**
+         * @param  {ConstructorParameters<typeof WeakMap>} args
+         */
+        constructor(...args) {
+            super(...args);
+        }
+
+        /**
+         * @param {Parameters<typeof WeakMap.prototype.set>[0]} key
+         * @param {Parameters<typeof WeakMap.prototype.set>[1]} value
+         */
+        set(key, value) {
+            if ("name" in key && key.name === "player.001") {
+                const player = /** @type {Player} */(key);
+                players.push(player);
+
+                const color = Object.freeze({ ...player.color });
+                const emissive = Object.freeze({ ...player.emissive });
+                defaults.push({ color, emissive });
+
+                console.log(player);
             }
 
-            /**
-             * @param {Parameters<typeof WeakMap.prototype.set>[0]} key
-             * @param {Parameters<typeof WeakMap.prototype.set>[1]} value
-             */
-            set(key, value) {
-                if ("name" in key && key.name === "player.001") {
-                    resolve(/** @type {Player} */(key));
-                }
-
-                return super.set(key, value);
-            }
-        });
+            return super.set(key, value);
+        }
     });
-
-    const player = await debug(`waitPlayer`, () => waitPlayer);
-    console.log(player);
-
-    // Restore original class to avoid monkey-patch overhead.
-    window.WeakMap = window_WeakMap;
-
-    const defaultColor = Object.freeze({ ...player.color });
-    const defaultEmissive = Object.freeze({ ...player.emissive });
 
     /**
      * https://en.wikipedia.org/wiki/HSL_and_HSV#HSV_to_RGB
@@ -161,34 +166,39 @@
         return [r + m, g + m, b + m];
     }
 
-    // Concurrently run animation loop as soon as possible.
+    // Concurrently run animation loops as soon as possible.
     (async () => {
         while (true) {
-            // Hue rotation speed in degrees per second.
-            const h = ((performance.now() / 1000) * settings.speed) % 360;
-            const [r, g, b] = HSVtoRGB(h, settings.saturation, settings.brightness);
+            for (let i = 0; i < players.length; ++i) {
+                const player = players[i];
+                const def = defaults[i];
 
-            if (settings.isColor) {
-                player.color.r = r;
-                player.color.g = g;
-                player.color.b = b;
-            } else {
-                player.color.r = defaultColor.r;
-                player.color.g = defaultColor.g;
-                player.color.b = defaultColor.b;
+                // Hue rotation speed in degrees per second.
+                const h = ((performance.now() / 1000) * settings.speed) % 360;
+                const [r, g, b] = HSVtoRGB(h, settings.saturation, settings.brightness);
+
+                if (settings.isColor) {
+                    player.color.r = r;
+                    player.color.g = g;
+                    player.color.b = b;
+                } else {
+                    player.color.r = def.color.r;
+                    player.color.g = def.color.g;
+                    player.color.b = def.color.b;
+                }
+
+                if (settings.isEmissive) {
+                    player.emissive.r = r;
+                    player.emissive.g = g;
+                    player.emissive.b = b;
+                } else {
+                    player.emissive.r = def.emissive.r;
+                    player.emissive.g = def.emissive.g;
+                    player.emissive.b = def.emissive.b;
+                }
+
+                player.wireframe = settings.isWireframe;
             }
-
-            if (settings.isEmissive) {
-                player.emissive.r = r;
-                player.emissive.g = g;
-                player.emissive.b = b;
-            } else {
-                player.emissive.r = defaultEmissive.r;
-                player.emissive.g = defaultEmissive.g;
-                player.emissive.b = defaultEmissive.b;
-            }
-
-            player.wireframe = settings.isWireframe;
 
             await new Promise((resolve) => window.requestAnimationFrame(resolve));
         }
