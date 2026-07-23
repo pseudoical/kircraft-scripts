@@ -73,6 +73,9 @@
     class Storage {
         static key = "@pseudoical_drop_all";
 
+        /**
+         * @returns {string[]}
+         */
         static getKeepIds() {
             let ids = localStorage.getItem(Storage.key);
 
@@ -81,7 +84,7 @@
                 localStorage.setItem(Storage.key, ids);
             }
 
-            return /** @type {string[]} */ (JSON.parse(ids));
+            return JSON.parse(ids);
         }
 
         /**

@@ -100,6 +100,9 @@
     class Storage {
         static key = "@pseudoical_wanted_items";
 
+        /**
+         * @returns {string[]}
+         */
         static getItems() {
             let items = localStorage.getItem(Storage.key);
 
@@ -108,7 +111,7 @@
                 localStorage.setItem(Storage.key, items);
             }
 
-            return /** @type {string[]} */ (JSON.parse(items));
+            return JSON.parse(items);
         }
 
         static itemsCache = /** @type {Set<string>} */ (new Set());

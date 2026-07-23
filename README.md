@@ -52,7 +52,7 @@ Display knife model as a wireframe. Use at your own risk.
 
 # [Player RGB](scripts/player-rgb.js) v0.2.22
 
-Animate all characters with RGB effect.
+Animate all characters with RGB effects.
 
 ![Player RGB](assets/player-rgb.webp)
 
