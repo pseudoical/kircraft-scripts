@@ -67,7 +67,7 @@
     /**
      * @param {HTMLElement} element
      */
-    async function waitForVisibility(element) {
+    async function waitVisibility(element) {
         await new Promise((resolve) => {
             const observer = new MutationObserver(async (mutations) => {
                 for (const mutation of mutations) {
@@ -90,7 +90,7 @@
 
     const loadingEnter = await debug(`getElementById("loading-enter")`, async () => {
         const element = await getElement(() => document.getElementById("loading-enter"));
-        await debug(`waitForVisibility(<loading-enter>)`, () => waitForVisibility(element));
+        await debug(`waitVisibility(<loading-enter>)`, () => waitVisibility(element));
         return element;
     });
 

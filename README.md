@@ -50,6 +50,12 @@ Display knife model as a wireframe. Use at your own risk.
 
 ![Knife Wireframe](assets/knife-wireframe.png)
 
+# [Player RGB](scripts/player-rgb.js) v0.2.22
+
+Animate you character skin with an RGB effect.
+
+![Player RGB](assets/player-rgb.webp)
+
 # [Show Inventory](scripts/show-inventory.js) v0.2.22
 
 Automatically show inventory when going to a new location.

@@ -337,7 +337,7 @@
     /**
      * @param {HTMLElement} cell
      */
-    async function waitForEmptyCell(cell) {
+    async function waitEmptyCell(cell) {
         await new Promise((resolve) => {
             if (isCellEmpty(cell)) {
                 resolve(undefined);
@@ -406,7 +406,7 @@
         confirm.click();
 
         // Wait for it to disappear from inventory.
-        await debug(`waitForEmptyCell(<cell>)`, () => waitForEmptyCell(cell));
+        await debug(`waitEmptyCell(<cell>)`, () => waitEmptyCell(cell));
 
         cell.style.filter = "";
     }
